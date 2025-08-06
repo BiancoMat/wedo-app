@@ -1,0 +1,111 @@
+Ora voglio completare tutta l’app WeDo.
+
+👤 Autenticazione (già fatta ✅):
+- Login e Registrazione con Firebase
+- Se utente loggato, accede al sito
+- Se non loggato, viene reindirizzato
+
+---
+
+🏠 Struttura generale del sito:
+- Header con logo “WeDo” hippy
+- Menu laterale o in alto con le sezioni:
+  • Home
+  • Profilo
+  • Favori
+  • Gruppi
+  • Notifiche
+  • Logout
+
+---
+
+1️⃣ **Home ("/")**
+- Mostra: “Ciao [email]! Hai [X] crediti.”
+- Mostra: Ultimi favori pubblicati pubblicamente
+- Bottone per “Richiedi un favore” o “Proponi un favore”
+
+---
+
+2️⃣ **Profilo ("/profile")**
+- Visibile solo a sé stessi
+- Mostra:
+  - Crediti disponibili
+  - Storico favori fatti / ricevuti (con data, descrizione e stato)
+  - Richieste inviate ancora attive o sospese
+- Design chiaro, colorato, con bordi arrotondati
+
+---
+
+3️⃣ **Favori ("/favors")**
+- ✅ Sottopagine:
+  - Cerca favori (mostra lista pubblica in ordine cronologico)
+  - Richiedi favore (form)
+  - Proponi favore (form)
+
+- Campi form:
+  - Tipo (Richiesta o Offerta)
+  - Titolo
+  - Descrizione
+  - Posizione (Remoto o Presenziale)
+  - Crediti richiesti/offerti
+  - Bottone “Pubblica”
+
+- Ogni favore pubblicato può essere accettato da un altro utente (mostra bottone “Accetta”)
+- Se accetti, compare nella tua cronologia (e parte notifica all’altro utente)
+
+---
+
+4️⃣ **Crediti**
+- Se hai 1 credito: puoi creare richieste illimitate, ma solo una è attiva.
+- Le altre vengono “sospese” automaticamente e riattivate quando hai nuovi crediti.
+- Crediti si guadagnano completando favori accettati da altri.
+
+---
+
+5️⃣ **Gruppi ("/groups")**
+- Ogni utente può:
+  - Creare un gruppo (nome, descrizione, tipo: pubblico o privato)
+  - Cercare gruppi pubblici
+  - Inviare richiesta di ingresso
+  - Visualizzare gruppo se membro
+
+- 3 modalità di gestione:
+  - Tutti i membri hanno stessi poteri
+  - Fondatore gestisce tutto
+  - Più admin (fondatore può promuovere altri)
+
+- Ogni gruppo ha:
+  - Lista membri
+  - Bacheca interna di favori condivisi
+  - Chat base (solo testo se possibile)
+
+---
+
+6️⃣ **Centro notifiche ("/notifications")**
+- Ricevi:
+  - Richieste di ingresso nei gruppi
+  - Accettazioni/proposte favori
+- Ogni notifica può essere:
+  - Accettata
+  - Rifiutata
+  - Archiviata
+
+- Mostra icona con numero notifiche nuove nel menu
+
+---
+
+7️⃣ **Stile (usare Tailwind CSS):**
+- Colorato, vibe hippy, ma leggibile
+- Sfondo chiaro, titoli blu scuro
+- Bordi rotondi, padding generoso
+- Font amichevole e responsive
+
+---
+
+8️⃣ **Altre regole**
+- Usa Firebase solo per auth, dati in memoria o finti placeholder
+- Salvataggio locale per ora (nessun DB Firestore)
+- L’app dev’essere navigabile e visibile in preview su Replit
+- A fine lavoro, mostra messaggio: ✅ WeDo 0.1 completata – pronta da testare
+
+Grazie ❤️
